@@ -1,8 +1,20 @@
 const btn = document.querySelector('#btnMudaLayout');
-
+const mural = document.querySelector('.mural');
 
 function mudaLayout(){
-    console.log('oiii');
+
+    mural.classList.toggle('mural--linha')
+    
+    /*
+    if(mural.classList.contains('mural--linha')){
+        mural.classList.remove('mural--linha')
+    } 
+    else {
+        mural.classList.add('mural--linha')
+    }
+
+    */
+    
 }
 
 function mudaTexto(){
@@ -16,4 +28,5 @@ function mudaTexto(){
     }
 }
 
-btn.onclick = mudaTexto
+btn.addEventListener('click', mudaTexto);
+btn.addEventListener('click', mudaLayout);
