@@ -1,32 +1,22 @@
-const btn = document.querySelector('#btnMudaLayout');
-const mural = document.querySelector('.mural');
-
-function mudaLayout(){
-
-    mural.classList.toggle('mural--linha')
+(function(){
+    const btn = document.querySelector('#btnMudaLayout');
+    const mural = document.querySelector('.mural');
     
-    /*
-    if(mural.classList.contains('mural--linha')){
-        mural.classList.remove('mural--linha')
-    } 
-    else {
-        mural.classList.add('mural--linha')
+    function mudaLayout(){
+        mural.classList.toggle('mural--linha')
     }
-
-    */
     
-}
-
-function mudaTexto(){
+    // Função Anônima
+    btn.addEventListener('click', function mudaTexto(){
+        if(btn.innerText == 'Linhas'){            
+            btn.innerText = 'Blocos'
+        }   
+        else {
+            btn.innerText = 'Linhas'
+        }
+    });
     
-    if(this.textContent == 'Blocos'){
-        
-        this.textContent = 'Linhas'
-    }
-    else {
-        this.textContent = 'Blocos'
-    }
-}
-
-btn.addEventListener('click', mudaTexto);
-btn.addEventListener('click', mudaLayout);
+    btn.addEventListener('click', mudaLayout);
+    
+    btn.classList.remove('no-js')
+})()
