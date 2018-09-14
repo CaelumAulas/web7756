@@ -7,9 +7,9 @@
     for(let posicao = 0; posicao < btns.length; posicao++){
         let btn = btns[posicao]
 
-        btn.addEventListener('click', function(){
+        btn.addEventListener('click', function(xuxu){
             //guardamos a referencia do cartao do botao clicado
-            const cartao = btn.parentElement.parentElement
+            const cartao = xuxu.target.parentElement.parentElement
             
             if(celularPodre){
                 cartao.remove()
