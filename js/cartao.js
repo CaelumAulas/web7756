@@ -18,8 +18,25 @@
         cartao.addEventListener('change', function mudaCor(event){
             if(event.target.classList.contains("opcoesDoCartao-radioTipo")){
                 console.log(event.target)
+                
                 const cor = event.target.value
+                
                 cartao.style.backgroundColor = cor
+            }
+        })
+
+        cartao.addEventListener('keydown', function(evento){
+            const label = evento.target
+            if(evento.code == 'Enter'){
+                label.click()
+            }
+            
+        })
+
+        cartao.addEventListener('click', function(evento){
+            if(evento.target.classList.contains('opcoesDoCartao-remove')){
+                this.classList.add('cartao--some');
+                this.addEventListener('transitionend', this.remove)
             }
         })
 

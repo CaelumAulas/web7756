@@ -1,6 +1,7 @@
 //IIFE - Immediately invoked function expression
 (function(){
     const celularPodre = false
+    
     //localizamos em quem queremos adicionar uma funcionalidade
     const btns = document.querySelectorAll('.opcoesDoCartao-remove')
     
@@ -18,7 +19,6 @@
                 cartao.classList.add('cartao--some')
     
                 // Função Callback
-        
                 //qdo a transição de CSS acabar, remove o cartao
                 cartao.addEventListener('transitionend', cartao.remove)
         
