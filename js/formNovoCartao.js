@@ -1,23 +1,21 @@
 ;(function(){
     const form = document.querySelector('.formNovoCartao');
-    const mural = document.querySelector('.mural');
-
+    
     form.addEventListener('submit', function(evento){
 
         evento.preventDefault();
-        const textarea = this.querySelector('textarea')
+        const textarea = this.querySelector('textarea'),
+              temTexto = textarea.value.trim()
 
-        if(textarea.value.trim()){
+        if(temTexto){
 
-            const cartao = document.createElement('article');
+            let objetoCartao = {
+                conteudo: temTexto
+            }
 
-            cartao.id = 'cartao_';
-            cartao.classList.add('cartao')
-            cartao.tabIndex = 0;
+            criarCartaoInserirNoMural(objetoCartao);
 
-            cartao.innerText = textarea.value.trim();
-
-            mural.insertAdjacentElement('afterbegin',cartao);
+            form.reset();
             
         } else {
             const msgErro = document.createElement('p')
