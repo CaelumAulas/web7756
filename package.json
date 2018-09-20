@@ -1,0 +1,29 @@
+{
+  "name": "ceep",
+  "version": "1.0.0",
+  "description": "gerenciador de lembretes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/.bin/babel src --out-dir dist --copy-files --watch --preset env"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanessametonini/web7756.git"
+  },
+  "author": "Vanessa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vanessametonini/web7756/issues"
+  },
+  "homepage": "https://github.com/vanessametonini/web7756#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0"
+  }
+}

@@ -1,6 +1,7 @@
 ;(function(){
 
     const btnAjuda = document.querySelector('#btnAjuda');
+
     const listaAjuda = [
         {
             conteudo:'Bem vindo ao ceep',
