@@ -2,9 +2,9 @@
 
     const btnAjuda = document.querySelector('#btnAjuda');
 
-    const listaAjuda = [
+    let listaAjuda = [
         {
-            conteudo:'Bem vindo ao ceep',
+            conteudo:'1 Bem vindo ao ceep',
             cor: 'yellow'
         },
         {
@@ -17,16 +17,15 @@
         }
     ]
 
-    //
     const conexaoApi = new XMLHttpRequest()
 
     conexaoApi.open('GET','http://ceep.herokuapp.com/cartoes/instrucoes')
+    conexaoApi.responseType = 'json';
     conexaoApi.send();    
 
     conexaoApi.addEventListener('load', function(){    
-        console.log(conexaoApi.response);
+        listaAjuda = conexaoApi.response.instrucoes        
     })
-
 
     btnAjuda.addEventListener('click', function(){
         
@@ -34,7 +33,7 @@
 
             criarCartaoInserirNoMural(objetoAjuda)
 
-        }) //fim foreach
+        })
 
     })//fim click
 

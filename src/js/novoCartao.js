@@ -1,8 +1,6 @@
 ;(function(){
     'use strict';
 
-
-    console.log('asdasdsa');
     let numeroCartao = 1;
 
     window.criarCartaoInserirNoMural = function (objetoCartao){
