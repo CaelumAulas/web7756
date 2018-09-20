@@ -17,6 +17,17 @@
         }
     ]
 
+    //
+    const conexaoApi = new XMLHttpRequest()
+
+    conexaoApi.open('GET','http://ceep.herokuapp.com/cartoes/instrucoes')
+    conexaoApi.send();    
+
+    conexaoApi.addEventListener('load', function(){    
+        console.log(conexaoApi.response);
+    })
+
+
     btnAjuda.addEventListener('click', function(){
         
         listaAjuda.forEach(function(objetoAjuda){
