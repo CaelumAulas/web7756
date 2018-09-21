@@ -5,8 +5,6 @@
 
     window.criarCartaoInserirNoMural = function (objetoCartao){
     
-        console.log(objetoCartao);
-    
         const mural = document.querySelector('.mural');
         const cartao = document.createElement('article');
     
